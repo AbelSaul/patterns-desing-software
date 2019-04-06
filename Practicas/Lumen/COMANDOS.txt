@@ -1,0 +1,34 @@
+* Instalar Lumen
+
+composer create-project --prefer-dist laravel/lumen patrones3
+cd patrones3
+
+* Crear la bd y modificar el archivo .env
+
+* Levantar el Proyecto
+php -S localhost:8000 -t public
+
+
+* Activar Eloquent,Facades, AuthServiceProvider
+bootstrap/app.php
+$app->withFacades();
+$app->withEloquent();
+
+	
+$app->routeMiddleware([
+ 'auth' => App\Http\Middleware\Authenticate::class,
+]);
+
+$app->register(App\Providers\AuthServiceProvider::class);
+
+
+
+* Crear migraciones
+
+php artisan make:migration create_authors_table
+
+* Migrarar las migraciones
+php artisan migrate
+
+
+

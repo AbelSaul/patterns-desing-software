@@ -1,0 +1,27 @@
+EN la carpeta bootstrap/app.php descomentar los siguiente archivos
+
+- $app->withEloquent();
+- $app->withFacades();
+	Los facades en Laravel proporcionan una interfaz “Estática” a las clases que están disponibles a través del contenedor de servicios de la aplicación, de esta manera podemos llamar a métodos sin tener que preocuparnos por instanciar la clase, pasar dependencias, etc. 
+	
+- $app->routeMiddleware([
+     'auth' => App\Http\Middleware\Authenticate::class,
+  ]);
+
+- $app->register(App\Providers\AuthServiceProvider::class);
+
+
+
+LEVANTAR APP LUMEN
+php -S localhost:8000 -t public
+
+CREAR Y EXPORTAR MIGRACIONES 
+php artisan make:migration create_authors_table
+php artisan migrate
+
+CREAR SEEDERS
+php artisan make:seeder UsersTableSeeder
+php artisan migrate:fresh --seed
+
+KEY 
+Para que funcione la encriptacion de claves debemos un generar un key de 32 caracteres

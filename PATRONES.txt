@@ -1,0 +1,8 @@
+El patron es la idea pero se aterriza de forma diferente
+El diseño es la idea pero el codigo es diferente para cada caso
+
+Ejemplo:
+Tienes un molde para hacer una chompa le aumentas la escala ya tiene chompa para un persona gordita
+
+Patron de diseño 
+Es una solucion de diseño a un problema recurrente en un contexto particular

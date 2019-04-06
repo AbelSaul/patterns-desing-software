@@ -1,0 +1,24 @@
+EN la carpeta bootstrap/app.php descomentar los siguiente archivos
+
+- $app->withEloquent();
+	
+- $app->routeMiddleware([
+     'auth' => App\Http\Middleware\Authenticate::class,
+  ]);
+
+- $app->register(App\Providers\AuthServiceProvider::class);
+
+
+
+LEVANTAR APP LUMEN
+php -S localhost:8000 -t public
+
+CREAR Y EXPORTAR MIGRACIONES 
+php artisan make:migration create_authors_table
+php artisan migrate
+
+Para probar la aplicacion
+ 
+Tiene que haber un usuario registrado en la bd con el api_token=1234 para poder ver el array de datos caso contrario mostrar el mensaje Unauthorized.
+http://localhost:8001/list?api_token=1234
+
