@@ -1,0 +1,22 @@
+
+
+1. crear proyecto de laravel
+
+$laravel new ChatLaravel
+
+2. Comando node js
+
+$npm install socket.io-cliente
+Lo que esta el package.json se procedera a instalar con el comando
+$npm install
+
+3. para que se crea la vista layouts
+
+$php artisan make:auth
+
+3. Laravel utiliza laravel mix para  juntar todos los archivo js en uno solo, va juntar todos los archivos css en uno solo
+
+$npm run dev
+
+$npm run watch-poll  (Este comando esta a la escucha de cambios en la aplicacion)
+Si tu modificas algo automaticante se ejecutar lo que se encuentre en laravel mix
